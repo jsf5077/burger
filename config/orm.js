@@ -81,4 +81,4 @@ var orm = {
 
 module.exports = orm;
 
-//referenced from 14-hndlebars activities 16-MvcExample
+//referenced from 14-handlebars activities 16-MvcExample
