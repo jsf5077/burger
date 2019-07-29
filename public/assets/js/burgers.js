@@ -18,10 +18,13 @@ $(function() {
         )
     });
 
-    $(".create-form").on("sumbit", function(event) {
+    $(".create-form").on("click", function(event) {
         event.preventDefault();
 
-        var newBurger = {name: $("#bg").val().trim()};
+        var newBurger = {
+            name: $(".add-new").val().trim(),
+            devoured: 0
+        };
 
         $.ajax("/api/burgers", {
             type: "POST",

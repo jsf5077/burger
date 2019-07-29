@@ -43,14 +43,8 @@ var orm = {
       cb(result);
     });
   }, 
-  insertOne: function (table, cols, vals, cb) {
-      var queryString = "INSERT INTO " + table;
-      queryString += " (";
-      queryString += cols.toString();
-      queryString += ") ";
-      queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
-      queryString += ") ";
+  insertOne: function(table, cols, vals, cb) {
+    var queryString = `INSERT INTO ${table} (${cols}) VALUES ('${vals[0]}', ${vals[1]})`
 
     console.log(queryString);
 
