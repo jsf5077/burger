@@ -1,44 +1,55 @@
 <h1>Das Burgerz!</h1>
 
-<h2>Fresh Burgers</h2>
+<div class=" row text-center p-4 m-0">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+  <div class="col">
+    <h2>Fresh Burgers</h2>
+    <ul class="p-0">
+      {{#each burgers}}
+      {{#unless devoured}}
 
-	    <li>
-	      {{burger_name}}
-
-	      <button class="change-devoured" data-id="{{id}}" data-devoured="1">EAT ME!</button>
+      <li class="list-group-item list-outline-light d-flex justify-content-between align-items-center">
+        
+          {{burger_name}}
+        
+          <span><button class="change-devoured btn btn-warning" data-id="{{id}}" data-devoured="1"><i class="fas fa-hamburger"></i> EAT ME!</button></span>
+        
       </li>
 
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Eaten Burgers</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      <li>
-        {{burger_name}}
-
-        <button class="change-devoured" data-id="{{id}}" data-devoured="0">MAKE A NEW ONE!</button>
-      </li>
-
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bg">Burger Name:</label>
-    <input type="text" class="form-control add-new" id="bg" name="name">
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 
+  <div class="col  empty-div"></div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <div class="col">
+    <h2>Eaten Burgers</h2>
+
+    <ul class="p-0">
+      {{#each burgers}}
+      {{#if devoured}}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         {{burger_name}}
+
+      <span><button class="change-devoured btn btn-danger" data-id="{{id}}" data-devoured="0">MAKE A NEW ONE! <i class="fas fa-hamburger"></i></button></span>
+
+      </li>
+
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+
+
+<footer id="sticky-footer" class="footer mt-auto ">
+  <nav class="navbar sticky-top navbar-light navbar-outline-light justify-content-between">
+    <a class="navbar-brand">ADD A BURGER  <i class="fas fa-arrow-right"></i></a>
+    <form class="create-form form-inline">
+      <input class="form-control mr-sm-2 add-new" type="search" id="bg" placeholder="Burger Name" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <i class="fas fa-hamburger"></i></button>
+    </form>
+  </nav>
+</footer>
