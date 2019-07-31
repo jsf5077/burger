@@ -30,9 +30,12 @@ h2 {
 .add-new {
     background-color: rgba(0, 0, 0, 0.185);
 }
-.btn-warning {
-    text-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.397);
+
+#burger-logo {
+    max-width: 12rem;
 }
-.btn-danger {
-    text-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.397);
-}
+
+img {
+    width: 100%;
+    height: auto;
+  }

@@ -1,8 +1,17 @@
-<h1>Das Burgerz!</h1>
+<div class="row justify-content-between">
+  <div class="col-4 m-4">
+    <img src="/assets/images/brand.png" class="img-fluid" id="burger-logo" alt="Responsive image">
+    
+  </div>
+  <div class="col-4 m-4  text-center">
+    <img src="/assets/images/Asset 2.png" class="img-fluid" id="burger-logo" alt="Responsive image">
+    
+  </div>
+</div>
 
-<div class=" row text-center p-4 m-0">
+<div class=" row text-center p-4 m-0 justify-content-between">
 
-  <div class="col">
+  <div class="col-4">
     <h2>Fresh Burgers</h2>
     <ul class="p-0">
       {{#each burgers}}
@@ -12,7 +21,7 @@
         
           {{burger_name}}
         
-          <span><button class="change-devoured btn btn-warning" data-id="{{id}}" data-devoured="1"><i class="fas fa-hamburger"></i> EAT ME!</button></span>
+          <span><button class="change-devoured btn btn-outline-warning" data-id="{{id}}" data-devoured="1"><i class="fas fa-hamburger"></i> EAT ME!</button></span>
         
       </li>
 
@@ -21,9 +30,9 @@
     </ul>
   </div>
 
-  <div class="col  empty-div"></div>
+  {{!-- <div class="col-xs-0 col-sm-4  empty-div"></div> --}}
 
-  <div class="col">
+  <div class="col-4">
     <h2>Eaten Burgers</h2>
 
     <ul class="p-0">
@@ -32,7 +41,7 @@
       <li class="list-group-item d-flex justify-content-between align-items-center">
          {{burger_name}}
 
-      <span><button class="change-devoured btn btn-danger" data-id="{{id}}" data-devoured="0">MAKE A NEW ONE! <i class="fas fa-hamburger"></i></button></span>
+      <span><button class="change-devoured btn btn-outline-danger" data-id="{{id}}" data-devoured="0">MAKE A NEW ONE! <i class="fas fa-hamburger"></i></button></span>
 
       </li>
 
@@ -46,10 +55,10 @@
 
 <footer id="sticky-footer" class="footer mt-auto ">
   <nav class="navbar sticky-top navbar-light navbar-outline-light justify-content-between">
-    <a class="navbar-brand">ADD A BURGER  <i class="fas fa-arrow-right"></i></a>
+    <a class="navbar-brand ml-2">ADD A BURGER  <i class="fas fa-arrow-right"></i></a>
     <form class="create-form form-inline">
       <input class="form-control mr-sm-2 add-new" type="search" id="bg" placeholder="Burger Name" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <i class="fas fa-hamburger"></i></button>
+      <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit"> <i class="fas fa-hamburger"></i></button>
     </form>
   </nav>
 </footer>
