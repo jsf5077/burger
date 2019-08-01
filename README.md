@@ -2,7 +2,7 @@
 
 Welcome to The Burger Joint! The application that allows you create your own burger and then eat it. Feel free to eat or remake any burger already on the menu! This application focuses on the use of handlebars while utilizing MySQL, Node, Express, and an ORM made from scratch. This application was also developed using the Model-View-Controller Pattern. 
 
-##Deployment
+## Deployment
 
 This application is deployed on Heroku.
 link: https://guarded-eyrie-78345.herokuapp.com/
