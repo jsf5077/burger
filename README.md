@@ -11,6 +11,9 @@ link: https://guarded-eyrie-78345.herokuapp.com/
 
 As the client, you navigate this application through your browser. You will be taken to the home page where you will have the opportunity to click on the burger buttons and add your own to the list. As there is a live database plugged in, the list of burgers will load in the current state they existed in the db on either the fresh burgers side or the eaten burgers side. Clicking on the burger buttons will move the burger from one list to the other. You also have the privilege of adding your own burger to the list at the bottom. All brand new burgers will always be generated in the fresh burgers list.  
 
+## Screenshot:
+![image](https://user-images.githubusercontent.com/37354778/66722827-2cb49480-ede0-11e9-8417-9b37725a8eff.png)
+
 ## Server side 
 
 **The Directory Structure consists of:** 
